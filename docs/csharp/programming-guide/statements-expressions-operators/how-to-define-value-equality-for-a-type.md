@@ -20,7 +20,7 @@ When you define a class or struct, you decide whether it makes sense to create a
   
 4.  Successive invocations of x.`Equals`(y) return the same value as long as the objects referenced by x and y are not modified.  
   
-5.  x.`Equals`(null) returns `false`. However, null.Equals(null) throws an exception; it does not obey rule number two above.  
+5.  x.`Equals`(null) returns `false`. However, null.Equals(null) throws an exception; it does not obey rule number one above.  
   
  Any struct that you define already has a default implementation of value equality that it inherits from the <xref:System.ValueType?displayProperty=nameWithType> override of the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> method. This implementation uses reflection to examine all the fields and properties in the type. Although this implementation produces correct results, it is relatively slow compared to a custom implementation that you write specifically for the type.  
   
